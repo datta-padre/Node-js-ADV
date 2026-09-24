@@ -1,0 +1,32 @@
+<h1>User List</h1>
+
+<table border="1" width="100%">
+    <tr>
+     <th>Sr.No</th>
+    <th>userName</th>
+    <th>userMobile</th>
+    <th>userEmail</th>
+    <th>Password</th>
+    <th>Action</th>
+    </tr>
+
+    <% data.map((val,i)=>{ %>
+
+        <tr>
+            <td><%=i+1%></td>
+            <td><%=val.user_name%></td>
+            <td><%=val.user_mobile%></td>
+            <td><%=val.user_email%></td>
+            <td><%=val.password%></td>
+            <td>
+                <button>
+                    <a href="/delete/<%=val.id%>">DELETE</a>
+                </button>
+                <button>
+                    <a href="/update/<%=val.id%>">UPDATE</a>
+                </button>
+            </td>
+        </tr>
+
+   <% }) %>
+</table>

@@ -1,0 +1,31 @@
+<h1>Student List</h1>
+
+
+<table border="1" width="100%">
+    <tr>
+        <th>Sr.No</th>
+        <th>Student Name</th>
+        <th>Student Mobile</th>
+        <th>Student Email</th>
+        <th>Student DOB</th>
+        <th>Student Address</th>
+        <th>Action</th>
+    </tr>
+
+    <% data.map((val,i)=>{ %>
+
+        <tr>
+            <td><%=i+1%></td>
+            <td><%=val.student_name%></td>
+            <td><%=val.student_mobile%></td>
+            <td><%=val.student_email%></td>
+            <td><%=val.student_dob%></td>
+            <td><%=val.student_address%></td>
+            <td>
+                <a href="/delete/<%=val.id%>">delete</a>
+            </td>
+        </tr>
+
+   <%  }) %>
+
+</table>

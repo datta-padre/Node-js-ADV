@@ -1,0 +1,21 @@
+<h1>Update User Data</h1>
+
+<a href="/list">Back</a>
+
+<br><br>
+
+<form action="/edit/<%=data.id%>" method="post">
+    Enter userName <br>
+    <input type="text" name="user_name" value="<%=data.user_name%>">
+    <br><br>
+    Enter Mobile <br>
+    <input type="number" name="user_mobile" value="<%=data.user_mobile%>">
+    <br><br>
+    Enter Email <br>
+    <input type="email" name="user_email" value="<%=data.user_email%>">
+    <br><br>
+    Enter Password <br>
+    <input type="text" name="password" value="<%=data.password%>"/>
+    <br><br>
+    <button>Update</button>
+</form>

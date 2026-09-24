@@ -1,0 +1,32 @@
+<h1>Pay Now</h1>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<button onclick="Payment()">PayNow</button>
+
+<script>
+var options = {
+    "key": "rzp_test_bpN3aN81Oaf8Mo", // Enter the Key ID generated from the Dashboard
+    "amount":100* 10, // Amount is in currency subunits. 
+    "currency": "INR",
+    "name": "A2Z IT HUB",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",//This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "callback_url":"https://google.com",
+    "prefill": {
+        "name": "Datta Padre",
+        "email": "dattapadre357@gmail.com",
+        "contact": "7249329153"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+
+function Payment(){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
